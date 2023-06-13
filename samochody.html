@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style3.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+   
+    <title>24h Le Mans | SAMOCHODY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>SAMOCHODY</h1>
+    </div>
+    <div class="content">
+      <p>W wyścigu 24h Le Mans startują różne kategorie samochodów, które rywalizują ze sobą na torze. Oto krótkie informacje o kilku kategoriach samochodów startujących w Le Mans:
+
+        LMP1 (Le Mans Prototype 1): Jest to najwyższa kategoria wyścigowa w Le Mans. Samochody LMP1 są specjalnie zaprojektowane do rywalizacji na torze, często z wykorzystaniem zaawansowanych technologii. Mają niski profil, lekką konstrukcję i duże moce silników. W tej kategorii startują zarówno fabryczne zespoły, jak i prywatni konstruktorzy.
+        
+        LMP2 (Le Mans Prototype 2): Kategoria LMP2 jest bardziej dostępna dla zespołów prywatnych. Samochody tej kategorii są bliższe samochodom drogowym pod względem specyfikacji. Mają nieco mniejsze moce silników i ograniczenia technologiczne w porównaniu do LMP1. W LMP2 można również spotkać zespoły z udziałem młodych i obiecujących kierowców.
+        
+        GTE (Grand Touring Endurance): Kategoria GTE jest dla samochodów wyścigowych opartych na samochodach drogowych. Samochody GTE są bardziej podobne do ich odpowiedników drogowych pod względem wyglądu i konstrukcji. Zespoły w tej kategorii muszą rywalizować z wykorzystaniem samochodów, które są sprzedawane na rynku, co wprowadza elementy konkurencji między producentami.
+        
+        GT3 (Grand Touring 3): Kategoria GT3 jest popularna w wyścigach długodystansowych na całym świecie. Samochody GT3 również oparte są na samochodach drogowych, ale mają mniej rygorystyczne ograniczenia techniczne niż samochody GTE. GT3 są często wykorzystywane przez zespoły prywatne i kierowców amatorów, umożliwiając szerszy dostęp do rywalizacji na torze.</p>
+    </div>
+    <div class="slider">
+        
+      <div class="slider-container">
+        <img src="lmp1.jpg" class="a">
+        <img src="lmp2.jpg" class="a">
+        <img src="gtpro.jpeg" class="a">
+        <img src="gt3.jpg" class="a">
+      </div>
+    </div>
+  </div>
+  <script>
+    var sliderImages = document.querySelectorAll('.slider-container img');
+    var currentSlide = 0;
+    sliderImages[currentSlide].style.display = 'block';
+
+    function nextSlide() {
+      sliderImages[currentSlide].style.display = 'none';
+      currentSlide = (currentSlide + 1) % sliderImages.length;
+      sliderImages[currentSlide].style.display = 'block';
+    }
+
+    setInterval(nextSlide, 3000);
+  </script>
+</body>
+</html>
